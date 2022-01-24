@@ -1,9 +1,11 @@
 package com.learn.aws.demo.teacher;
 
+import java.util.List;
+
 public class Teacher {
   String name;
   String[] students;
-  String[] remoteStudents;
+  List remoteStudents;
 
   public String getName() {
     return name;
@@ -21,11 +23,11 @@ public class Teacher {
     this.students = students;
   }
 
-  public String[] getRemoteStudents() {
+  public List getRemoteStudents() {
     return remoteStudents;
   }
 
-  public void setRemoteStudents(String[] remoteStudents) {
+  public void setRemoteStudents(List remoteStudents) {
     this.remoteStudents = remoteStudents;
   }
 }
