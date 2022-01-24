@@ -23,4 +23,14 @@ public class TeacherController {
     teacher.setStudents((String[])students);
     return new ResponseEntity<>(teacher, HttpStatus.OK);
   }
+
+
+  @GetMapping("/getPartialStudents")
+  ResponseEntity<Teacher> getPartialStudents() {
+    Object students = new String[] {"Raja", "Kirti"};
+    Teacher teacher = new Teacher();
+    teacher.setName("English Teacher");
+    teacher.setStudents((String[])students);
+    return new ResponseEntity<>(teacher, HttpStatus.OK);
+  }
 }
