@@ -3,6 +3,7 @@ package com.learn.aws.demo.teacher;
 public class Teacher {
   String name;
   String[] students;
+  String[] remoteStudents;
 
   public String getName() {
     return name;
@@ -18,5 +19,13 @@ public class Teacher {
 
   public void setStudents(String[] students) {
     this.students = students;
+  }
+
+  public String[] getRemoteStudents() {
+    return remoteStudents;
+  }
+
+  public void setRemoteStudents(String[] remoteStudents) {
+    this.remoteStudents = remoteStudents;
   }
 }
