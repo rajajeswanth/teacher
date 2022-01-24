@@ -12,14 +12,14 @@ import org.springframework.web.client.RestTemplate;
 public class TeacherController {
   @GetMapping("/getStudents")
   ResponseEntity<Teacher> getStudents() {
-//    String studentsUrl = "http://student.rajaaws:8080/student/getStudents";
-//    RestTemplate restTemplate = new RestTemplate();
-//    ResponseEntity<Object> responseEntity = restTemplate.getForEntity(studentsUrl, Object.class);
+    String studentsUrl = "http://student.studentteacher.local:8080/student/getStudents";
+    RestTemplate restTemplate = new RestTemplate();
+    ResponseEntity<Object> responseEntity = restTemplate.getForEntity(studentsUrl, Object.class);
 
     Object students = new String[] {"Raja", "Kirti"};
     Teacher teacher = new Teacher();
     teacher.setName("Science Teacher");
-//    teacher.setStudents((String[])responseEntity.getBody());
+    teacher.setRemoteStudents((String[])responseEntity.getBody());
     teacher.setStudents((String[])students);
     return new ResponseEntity<>(teacher, HttpStatus.OK);
   }
