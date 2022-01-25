@@ -41,14 +41,14 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: terraform -chdir=./terraform/aws-fargate/ init
+      run: terraform -chdir=./terraform/aws_fargate/ init
 
     # Terraform apply
     - name: Terraform Apply
       if: github.event.inputs.action == 'create'
-      run: terraform -chdir=./terraform/aws-fargate/ apply -auto-approve
+      run: terraform -chdir=./terraform/aws_fargate/ apply -auto-approve
 
     # Terraform destroy
     - name: Terraform Destroy
       if: github.event.inputs.action == 'destroy'
-      run: terraform -chdir=./terraform/aws-fargate/ destroy -auto-approve
+      run: terraform -chdir=./terraform/aws_fargate/ destroy -auto-approve
