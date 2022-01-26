@@ -1,4 +1,4 @@
-name: 'Terraform Amazon Teacher Student ECS Fargate'
+name: 'Terraform Amazon Teacher Student ECS Fargate Gateway'
 
 on:
   workflow_dispatch:
