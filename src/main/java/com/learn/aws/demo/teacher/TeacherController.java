@@ -14,7 +14,7 @@ import java.util.List;
 public class TeacherController {
   @GetMapping("/getStudents")
   ResponseEntity<Teacher> getStudents() {
-    String studentsUrl = "http://student.studentteacher.local:8080/student/getStudents";
+    String studentsUrl = "http://student.studentteacher.local/student/getStudents";
     RestTemplate restTemplate = new RestTemplate();
     ResponseEntity<Object> responseEntity = restTemplate.getForEntity(studentsUrl, Object.class);
 
