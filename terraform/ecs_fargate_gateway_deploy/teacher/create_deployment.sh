@@ -1,0 +1,1 @@
+aws deploy create-deployment --application-name teacher-codedeploy-app --deployment-config-name student-codedeploy-config --deployment-group-name teacher-codedeploy-group --s3-location bucket=us-east-1-teacher-appspec,bundleType=yaml,key=appspec.yml
